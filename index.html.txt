@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ghana RN Connect | International Nurse Sourcing & Preparation</title>
+  <meta name="description" content="Ghana RN Connect identifies qualified Registered Nurses in Ghana, prepares them for NCLEX-RN, English exams, CGFNS, and VisaScreen, and transitions them to trusted U.S. partners for EB-3 immigrant visa processing and hospital placement.">
+  <style>
+    /* Basic Reset */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      color: #1a1a1a;
+      background-color: #f7f7f9;
+    }
+
+    /* Layout Helpers */
+    .container {
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    .section {
+      padding: 4rem 0;
+    }
+
+    .bg-light {
+      background-color: #ffffff;
+    }
+
+    .bg-dark {
+      background: linear-gradient(135deg, #04121b, #082434);
+      color: #f0f4f8;
+    }
+
+    /* Header & Navigation */
+    .site-header {
+      background-color: #ffffff;
+      border-bottom: 1px solid #e3e6ee;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.85rem 0;
+    }
+
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .logo-img {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #0f766e, #22c55e);
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-title {
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .logo-subtitle {
+      font-size: 0.8rem;
+      color: #6b7280;
+    }
+
+    .nav {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .nav a {
+      font-size: 0.9rem;
+      text-decoration: none;
+      color: #111827;
+      padding: 0.35rem 0.55rem;
+      border-radius: 999px;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .nav a:hover {
+      background-color: #0f766e;
+      color: #ffffff;
+    }
+
+    /* Hero */
+    .hero {
+      background: radial-gradient(circle at top left, #0f766e15, transparent 60%),
+                  radial-gradient(circle at bottom right, #1d4ed815, transparent 60%);
+      padding: 4rem 0 4.5rem;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.5fr);
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .hero-text h1 {
+      font-size: 2.4rem;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      color: #0b1120;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      max-width: 40rem;
+      color: #374151;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-tagline {
+      font-size: 0.9rem;
+      color: #0f766e;
+      font-weight: 600;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      padding: 0.6rem 1.3rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background-color: #0f766e;
+      color: #ffffff;
+      border-color: #0f766e;
+    }
+
+    .btn-primary:hover {
+      background-color: #115e59;
+      border-color: #115e59;
+    }
+
+    .btn-secondary {
+      background-color: #ffffff;
+      color: #0f172a;
+      border-color: #d1d5db;
+    }
+
+    .btn-secondary:hover {
+      background-color: #e5e7eb;
+      border-color: #9ca3af;
+    }
+
+    .full-width {
+      width: 100%;
+    }
+
+    /* Hero Card */
+    .hero-card {
+      background-color: #ffffff;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+    }
+
+    .hero-card h2 {
+      font-size: 1.2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-list {
+      list-style: none;
+    }
+
+    .hero-list li {
+      padding: 0.3rem 0;
+      font-size: 0.95rem;
+    }
+
+    /* Sections */
+    .section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-intro {
+      font-size: 1rem;
+      color: #4b5563;
+      margin-bottom: 1.75rem;
+      max-width: 40rem;
+    }
+
+    /* Grids */
+    .grid {
+      display: grid;
+      gap: 2rem;
+    }
+
+    .two-col {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .three-col {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    /* Lists */
+    .bullet-list {
+      list-style: disc;
+      padding-left: 1.1rem;
+    }
+
+    .bullet-list li {
+      margin-bottom: 0.5rem;
+    }
+
+    .numbered-list {
+      list-style: decimal;
+      padding-left: 1.1rem;
+    }
+
+    .numbered-list li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* Info Box */
+    .info-box {
+      margin-top: 1.75rem;
+      padding: 1rem 1.25rem;
+      border-radius: 0.75rem;
+      background-color: #ecfeff;
+      color: #064e3b;
+      font-size: 0.9rem;
+    }
+
+    /* Cards / Value */
+    .card {
+      background-color: #ffffff;
+      border-radius: 0.9rem;
+      padding: 1.25rem;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+    }
+
+    .card h3 {
+      font-size: 1.05rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .value-summary {
+      margin-top: 2.25rem;
+    }
+
+    /* Timeline */
+    .timeline {
+      margin-top: 1.5rem;
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .timeline-step {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .step-number {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background-color: #0f766e;
+      color: #ffffff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-top: 0.25rem;
+    }
+
+    .step-content h3 {
+      margin-bottom: 0.25rem;
+      font-size: 1.05rem;
+    }
+
+    /* Contact */
+    .contact-container {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    .contact-text {
+      margin: 0.8rem 0 1.2rem;
+      color: #e5e7eb;
+    }
+
+    .contact-details {
+      list-style: none;
+      font-size: 0.95rem;
+    }
+
+    .contact-details li {
+      margin-bottom: 0.4rem;
+    }
+
+    .contact-form-wrap {
+      background-color: #020617;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .contact-form h3 {
+      margin-bottom: 0.9rem;
+    }
+
+    .contact-form label {
+      display: block;
+      font-size: 0.85rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+      width: 100%;
+      margin-top: 0.3rem;
+      padding: 0.45rem 0.55rem;
+      border-radius: 0.5rem;
+      border: 1px solid #4b5563;
+      background-color: #020617;
+      color: #e5e7eb;
+      font-size: 0.9rem;
+    }
+
+    .contact-form input:focus,
+    .contact-form select:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      border-color: #0ea5e9;
+    }
+
+    /* Footer */
+    .site-footer {
+      padding: 1.5rem 0 2.25rem;
+      background-color: #020617;
+      color: #9ca3af;
+      font-size: 0.85rem;
+    }
+
+    .footer-inner {
+      text-align: center;
+    }
+
+    .footer-small {
+      margin-top: 0.25rem;
+      max-width: 36rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        order: -1;
+      }
+
+      .two-col,
+      .three-col,
+      .contact-container {
+        grid-template-columns: 1fr;
+      }
+
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+
+      .nav {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero-text h1 {
+        font-size: 1.9rem;
+      }
+
+      .section {
+        padding: 3rem 0;
+      }
+
+      .site-header {
+        position: static;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Navigation -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo-wrap">
+        <div class="logo-img"></div>
+        <div class="logo-text">
+          <span class="logo-title">Ghana RN Connect</span>
+          <span class="logo-subtitle">International Nurse Sourcing & Preparation</span>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="#for-nurses">For Nurses</a>
+        <a href="#for-employers">For Employers</a>
+        <a href="#how-it-works">Process</a>
+        <a href="#value-proposition">Why Us</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h1>From Ghana to U.S. Hospitals — The Right Way.</h1>
+        <p class="hero-subtitle">
+          We identify qualified Registered Nurses in Ghana, guide them through NCLEX-RN,
+          English language testing, CGFNS documentation, and VisaScreen readiness — then
+          transition them to our U.S. immigration and staffing partner for EB-3 processing
+          and hospital placement.
+        </p>
+        <div class="hero-buttons">
+          <a href="#for-nurses" class="btn btn-primary">I’m a Nurse in Ghana</a>
+          <a href="#for-employers" class="btn btn-secondary">I’m a U.S. Employer</a>
+        </div>
+        <p class="hero-tagline">Ethical. Compliant. NCLEX-ready nurses who arrive U.S. work-ready.</p>
+      </div>
+      <div class="hero-card">
+        <h2>Quick Snapshot</h2>
+        <ul class="hero-list">
+          <li>🌍 Ghana-based sourcing & screening</li>
+          <li>📘 NCLEX-RN preparation & coaching</li>
+          <li>🗣 OET / IELTS English exam readiness</li>
+          <li>📄 CGFNS & VisaScreen documentation support</li>
+          <li>🏥 EB-3 visa & hospital placement via U.S. partner</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- For Nurses -->
+  <section id="for-nurses" class="section bg-light">
+    <div class="container">
+      <h2>For Nurses in Ghana</h2>
+      <p class="section-intro">
+        Ghana RN Connect is your bridge from local practice in Ghana to long-term,
+        stable nursing careers in the United States.
+      </p>
+
+      <div class="grid two-col">
+        <div>
+          <h3>We Help You With:</h3>
+          <ul class="bullet-list">
+            <li>Eligibility checks and pre-screening of your nursing education and license.</li>
+            <li>Structured NCLEX-RN study plans, resources, and accountability.</li>
+            <li>Preparation for English exams (OET or IELTS) required by U.S. standards.</li>
+            <li>Guidance on CGFNS documentation and primary source verification.</li>
+            <li>VisaScreen preparation so you meet U.S. credentialing requirements.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Your Pathway in 5 Steps</h3>
+          <ol class="numbered-list">
+            <li>Apply to Ghana RN Connect and complete our nurse pre-screening.</li>
+            <li>Begin guided NCLEX-RN and English exam preparation with our support.</li>
+            <li>Submit CGFNS and VisaScreen documentation with our guidance.</li>
+            <li>Once credential-ready, we hand you off to our U.S. immigration & staffing partner.</li>
+            <li>Your U.S. partner manages EB-3 visa processing and hospital placement.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="info-box">
+        <strong>Important:</strong> Ghana RN Connect is <em>not</em> an immigration law firm.
+        We prepare you to be NCLEX-ready and credential-ready, then transition you to our
+        trusted U.S. immigration and staffing partner.
+      </div>
+    </div>
+  </section>
+
+  <!-- For Employers -->
+  <section id="for-employers" class="section">
+    <div class="container">
+      <h2>For U.S. Hospitals & Employers</h2>
+      <p class="section-intro">
+        We reduce your burden by delivering pre-screened, NCLEX-ready international nurses
+        from Ghana who meet U.S. regulatory and credentialing standards.
+      </p>
+
+      <div class="grid three-col">
+        <div class="card">
+          <h3>NCLEX-Ready Talent</h3>
+          <p>
+            Candidates are prepared and supported to pass the NCLEX-RN exam, reducing
+            your onboarding risk and training time.
+          </p>
+        </div>
+        <div class="card">
+          <h3>End-to-End Readiness</h3>
+          <p>
+            We help nurses complete English testing, CGFNS, and VisaScreen,
+            so they arrive compliant with U.S. credentialing requirements.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Reduced Employer Burden</h3>
+          <p>
+            We handle sourcing, pre-screening, readiness, and document collection in Ghana,
+            then transition to your immigration & staffing process.
+          </p>
+        </div>
+      </div>
+
+      <div class="value-summary">
+        <h3>Our Value to U.S. Partners</h3>
+        <ul class="bullet-list">
+          <li>Ethically sourced nursing talent from Ghana with transparent communication.</li>
+          <li>Structured preparation pipeline, not random one-off candidates.</li>
+          <li>Aligned with U.S. regulatory expectations for international nurses.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Value Proposition -->
+  <section id="value-proposition" class="section bg-light">
+    <div class="container">
+      <h2>Our Value Proposition</h2>
+      <div class="grid two-col">
+        <div>
+          <h3>For Employers</h3>
+          <ul class="bullet-list">
+            <li>We deliver pre-screened, NCLEX-ready international nurses.</li>
+            <li>We reduce employer burden by handling sourcing, readiness, and document collection.</li>
+            <li>Candidates arrive compliant with U.S. regulatory and credentialing standards.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>For Nurses</h3>
+          <ul class="bullet-list">
+            <li>Clear roadmap from Ghana to U.S. practice.</li>
+            <li>Hands-on preparation support instead of navigating the process alone.</li>
+            <li>Connection to trusted U.S. partners for EB-3 processing and placement.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section id="how-it-works" class="section">
+    <div class="container">
+      <h2>How Ghana RN Connect Works</h2>
+      <div class="timeline">
+        <div class="timeline-step">
+          <span class="step-number">1</span>
+          <div class="step-content">
+            <h3>Sourcing & Pre-Screening</h3>
+            <p>
+              We identify and interview qualified Registered Nurses in Ghana, reviewing
+              education, licensure, and work history.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-step">
+          <span class="step-number">2</span>
+          <div class="step-content">
+            <h3>Exam Preparation</h3>
+            <p>
+              Nurses are supported through NCLEX-RN preparation and English language exams
+              such as OET or IELTS, with structure and accountability.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-step">
+          <span class="step-number">3</span>
+          <div class="step-content">
+            <h3>Documentation & Credentialing</h3>
+            <p>
+              We guide nurses through CGFNS documentation, primary source verification,
+              and VisaScreen readiness, aligned with U.S. standards.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-step">
+          <span class="step-number">4</span>
+          <div class="step-content">
+            <h3>Transition to U.S. Partner</h3>
+            <p>
+              Once fully credential-ready, we transition the nurse to our U.S. immigration
+              and staffing partner for EB-3 immigrant visa processing and hospital placement.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-step">
+          <span class="step-number">5</span>
+          <div class="step-content">
+            <h3>Deployment & Ongoing Relationship</h3>
+            <p>
+              Nurses begin work in the U.S., and we remain a Ghana-side contact point for
+              future talent and long-term partnership.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section bg-dark">
+    <div class="container contact-container">
+      <div>
+        <h2>Contact Ghana RN Connect</h2>
+        <p class="contact-text">
+          Whether you’re a nurse in Ghana ready to start your journey, or a U.S. hospital
+          looking for a reliable Ghana-side sourcing and preparation partner, we’d love
+          to hear from you.
+        </p>
+        <ul class="contact-details">
+          <li><strong>Email:</strong> info@ghanarnconnect.com</li>
+          <li><strong>Location:</strong> Based in the United States, serving nurses in Ghana & U.S. employers.</li>
+        </ul>
+      </div>
+
+      <div class="contact-form-wrap">
+        <form class="contact-form" action="#" method="post">
+          <h3>Send Us a Message</h3>
+          <label>
+            Your Name
+            <input type="text" name="name" required>
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" required>
+          </label>
+          <label>
+            I am a:
+            <select name="role">
+              <option value="nurse">Nurse in Ghana</option>
+              <option value="employer">U.S. Hospital / Employer</option>
+              <option value="other">Other</option>
+            </select>
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="4" required></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary full-width">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Ghana RN Connect. All rights reserved.</p>
+      <p class="footer-small">
+        Ghana RN Connect identifies and prepares international nurse candidates in Ghana and
+        partners with U.S. immigration and staffing experts for EB-3 processing and placement.
+      </p>
+    </div>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </footer>
+</body>
+</html>
