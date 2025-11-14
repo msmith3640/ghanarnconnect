@@ -65,13 +65,14 @@
       gap: 0.75rem;
     }
 
-    .logo-img {
-      width: 44px;
-      height: 44px;
-      object-fit: contain;
-      border-radius: 999px;
-      background: linear-gradient(135deg, #0f766e, #22c55e);
-    }
+.logo-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 0;       /* keep logo shape */
+  background: none;       /* remove fake gradient */
+  display: block;
+}
 
     .logo-text {
       display: flex;
@@ -441,8 +442,8 @@
   <!-- Top Navigation -->
   <header class="site-header">
     <div class="container header-inner">
-      <div class="logo-wrap">
-        <div class="logo-img"></div>
+<div class="logo-wrap">
+  <img src="logo.png" alt="Ghana RN Connect logo" class="logo-img">
         <div class="logo-text">
           <span class="logo-title">Ghana RN Connect</span>
           <span class="logo-subtitle">International Nurse Sourcing & Preparation</span>
@@ -708,4 +709,5 @@
   </footer>
 </body>
 </html>
+
 
